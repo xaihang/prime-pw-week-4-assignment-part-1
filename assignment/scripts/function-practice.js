@@ -19,13 +19,28 @@ function helloName() {   // created a reuseable function named 'helloName()'
   return `Hello, ${name}!`; //when invoking the helloName() function it will return 'Hello,  (and the assigned value in variable name back in text string)!' ...ie "Hello, Xai!"
 }
 // Remember to call the function to test
-console.log('Test - should say "Hello, Xai!"', helloName()); 
+console.log('--- 2. personalized hello to name ---', helloName());
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
+//comments: 
+//  wrote a function and named it 'addNumbers'
+//  there are two numbers we are adding together - so safe to say we are dealing with two parameters (these are variables or placeholders that will be used to pass in outside information into our function)
+//  we will name those parameters num1 and numb 2 *each parameter should be separated by a comma!
+//  inside the curly braces { } is where we want the function to perform
+//  in this case we want the function to be able to add two numbers together, take the parameters num1 + numb2
+// however, we must use the keyword 'return' before executing the procedural of num1 + num2
+// because the returns is the final product given back to us after the function is done running. 
+// summary: our function below is saying "num1 and num2 
+//    and add them together, in 'return' is your solution of the two parameters
+function addNumbers(num1, num2) {
+  return num1 += num2; 
 }
+console.log('--- 3. add two numbers using function/return ---', addNumbers(5, 4));
+console.log('Test - 5 + 5 should be 10 and the return result is: ', addNumbers(5, 5));
+console.log('Test - 3 + 8 should be 11 and the return result is: ', addNumbers(3, 8));
+console.log('Test - 9 + 3 should be 12 and the return result is: ', addNumbers(9, 3));
+console.log('Test - 2 + 11 should be 13 and the return result is: ', addNumbers(2, 11));
 
 
 // 4. Function to multiply three numbers & return the result
