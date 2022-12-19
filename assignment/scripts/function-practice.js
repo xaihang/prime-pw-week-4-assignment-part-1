@@ -14,10 +14,12 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName( name ) {
-  return;
+const name = 'Xai'; // declare a variable 'name' and assigned it to my name 'Xai' text string type.
+function helloName() {   // created a reuseable function named 'helloName()' 
+  return `Hello, ${name}!`; //when invoking the helloName() function it will return 'Hello,  (and the assigned value in variable name back in text string)!' ...ie "Hello, Xai!"
 }
 // Remember to call the function to test
+console.log('Test - should say "Hello, Xai!"', helloName()); 
 
 
 // 3. Function to add two numbers together & return the result
