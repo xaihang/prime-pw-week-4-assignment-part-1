@@ -4,12 +4,20 @@ console.log('***** Function Practice *****');
 // After _each_ function, use a console log to call the function
 // to test it and display the result
 
+
 // 1. Function to return 'Hello World!'
 function hello() {
   return 'Hello World!';
 }
+
+//re-write function above in arrow function style
+//  *this style of arrow function only works if the function has only one statement
+// hello = () => 'Hello World!'; 
+
 // Call the function to test
+console.log('--- 1. result "Hello World!" ---');
 console.log('Test - should say "Hello World!"', hello());
+
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
@@ -19,7 +27,9 @@ function helloName() {
   return `Hello, ${name}!`; //when invoking the helloName() function it will return 'Hello,  (and the assigned value in variable name back in text string)!' ...ie "Hello, Xai!"
 }
 // Remember to call the function to test
-console.log('--- 2. personalized hello to name ---', helloName());
+console.log('--- 2. personalized hello to name ---');
+console.log(helloName());
+
 
 // 3. Function to add two numbers together & return the result
 //comments:
@@ -35,11 +45,12 @@ console.log('--- 2. personalized hello to name ---', helloName());
 function addNumbers(num1, num2) {
   return num1 += num2;
 }
-console.log('--- 3. add two numbers using function/return ---',addNumbers(5, 4));
-console.log('Test - 5 + 5 = 10 and the return result is: ',addNumbers(5, 5));
-console.log('Test - 3 + 8 = 11 and the return result is: ',addNumbers(3, 8));
-console.log('Test - 9 + 3 = 12 and the return result is: ',addNumbers(9, 3));
-console.log('Test - 2 + 11 = 13 and the return result is: ',addNumbers(2, 11));
+console.log('--- 3. add two numbers using function/return ---');
+console.log('Test; 5 + 5 = 10 and the return result is: ',addNumbers(5, 5));
+console.log('Test; 3 + 8 = 11 and the return result is: ',addNumbers(3, 8));
+console.log('Test; 9 + 3 = 12 and the return result is: ',addNumbers(9, 3));
+console.log('Test; 2 + 11 = 13 and the return result is: ',addNumbers(2, 11));
+
 
 // 4. Function to multiply three numbers & return the result
 //comments:
@@ -49,22 +60,29 @@ console.log('Test - 2 + 11 = 13 and the return result is: ',addNumbers(2, 11));
 function multiplyThree(num1, num2, num3) {
   return num1 * num2 * num3;
 }
-console.log('--- 4. multiply three numbers & return the result ---',multiplyThree(2, 4, 6));
-console.log('Test - 1 * 3 * 3 = 9 and the return result is: ',multiplyThree(1, 3, 3));
-console.log('Test - 2 * 5 * 7 = 70 and the return result is: ',multiplyThree(2, 5, 7));
-console.log('Test - 3 * 4 * 2 = 24 and the return result is: ',multiplyThree(3, 4, 2));
+console.log('--- 4. multiply three numbers & return the result --- ');
+console.log('Test; 1 * 3 * 3 = 9 and the return result is: ',multiplyThree(1, 3, 3));
+console.log('Test; 2 * 5 * 7 = 70 and the return result is: ',multiplyThree(2, 5, 7));
+console.log('Test; 3 * 4 * 2 = 24 and the return result is: ',multiplyThree(3, 4, 2));
 
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
-function isPositive(number) {
-  if (number > 0) {
-    return;
-  }
-  return;
-}
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
+// comments:
+//  function is verifying the parameter (number) is it positive? TRUE OR FALSE?
+//    first condition will result in 'TRUE' if the number is greater than 0
+//    otherwise it will be false, because it is either 0 or negative number
+console.log('--- 5. function with boolean result based on conditions---');
+
+function isPositive(number) {
+  if (number > 0) {
+    return 'TRUE';
+  } else {
+    return 'FALSE'; 
+  }
+}
 console.log('isPositive - should say true', isPositive(3));
 console.log('isPositive - should say false', isPositive(0));
 console.log('isPositive - should say false', isPositive(-3));
