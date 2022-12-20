@@ -87,25 +87,51 @@ console.log('isPositive - should say true', isPositive(3));
 console.log('isPositive - should say false', isPositive(0));
 console.log('isPositive - should say false', isPositive(-3));
 
+
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast(array) {}
+// comments:
+//  declared variable 'array' assigned it to 'undefine' by using square brackets and nothing inside the brackets
+//  use the pop () method; this remove the last item from an array list
+//  declared a new object/variable name 'itemRemoved' assigned it to original array and append pop method to it
+//  create a function (procedure) and named it 'getLast'
+//  this function will take the parameters (values) from 'array' after the fact that pop method is applied 
+//  and return the last item that was removed from the array list. 
+//  and in this case our array will return in result of 'undefined' because there is currently nothing inside our array list
+console.log('--- 6. function to return last item in an array ---');
+
+let array = [];
+let itemRemoved = array.pop();
+function getLast(array) {
+  return itemRemoved;
+};
+console.log('Last item in the array is:', getLast());
+
+
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find(value, array) {}
+console.log('--- 7. function to find a value in an array ---');
+
+function find(value, array) {
+
+}
+
+
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
+console.log('--- 8. STRETCH GOAL: a function with boolean to check first letter ---');
 function isFirstLetter(letter, string) {}
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
 // 9. Function to return the sum of all numbers in an array
+console.log('--- 9. function to return the sum of array ---');
 function sumAll() {
   let sum = 0;
   // TODO: loop to add items
@@ -115,7 +141,9 @@ function sumAll() {
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+console.log('--- 10. function to return a new array of all positive number ---');
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+console.log('--- 11. check a problem and solve it! ---');
