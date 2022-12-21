@@ -20,10 +20,14 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-const name = 'Xai'; // declare a variable 'name' and assigned it to my name 'Xai' text string type.
+//**** comment:
+//  declare a variable 'name' and assigned it to my name 'Xai' text string type
+//  created a reuseable function named 'helloName()'
+//  when invoking the helloName() function it will return 'Hello,  
+//  (and the assigned value in variable name back in text string)!' ...ie "Hello, Xai!"
+const name = 'Xai'; 
 function helloName() {
-  // created a reuseable function named 'helloName()'
-  return `Hello, ${name}!`; //when invoking the helloName() function it will return 'Hello,  (and the assigned value in variable name back in text string)!' ...ie "Hello, Xai!"
+  return `Hello, ${name}!`; 
 }
 // Remember to call the function to test
 console.log('--- 2. personalized hello to name ---');
