@@ -40,7 +40,7 @@ console.log(helloName());
 // summary: our function below is saying "num1 and num2
 //    and add them together, in 'return' is your solution of the two parameters
 function addNumbers(num1, num2) {
-  return (num1 += num2);
+  return num1 += num2;
 }
 console.log('--- 3. add two numbers using function/return ---');
 console.log('Test; 5 + 5 = 10 and the return result:', addNumbers(5, 5));
@@ -73,9 +73,9 @@ console.log('--- 5. function with boolean value based on conditions---');
 
 function isPositive(number) {
   if (number > 0) {
-    return 'TRUE';
+    return true;
   } else {
-    return 'FALSE';
+    return false;
   }
 }
 console.log('isPositive - should say true', isPositive(3));
