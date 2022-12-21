@@ -43,10 +43,10 @@ function addNumbers(num1, num2) {
   return (num1 += num2);
 }
 console.log('--- 3. add two numbers using function/return ---');
-console.log('Test; 5 + 5 = 10 and the return result is:', addNumbers(5, 5));
-console.log('Test; 3 + 8 = 11 and the return result is:', addNumbers(3, 8));
-console.log('Test; 9 + 3 = 12 and the return result is:', addNumbers(9, 3));
-console.log('Test; 2 + 11 = 13 and the return result is:', addNumbers(2, 11));
+console.log('Test; 5 + 5 = 10 and the return result:', addNumbers(5, 5));
+console.log('Test; 3 + 8 = 11 and the return result:', addNumbers(3, 8));
+console.log('Test; 9 + 3 = 12 and the return result:', addNumbers(9, 3));
+console.log('Test; 2 + 11 = 13 and the return result:', addNumbers(2, 11));
 
 // 4. Function to multiply three numbers & return the result
 //comments:
@@ -57,9 +57,9 @@ function multiplyThree(num1, num2, num3) {
   return num1 * num2 * num3;
 }
 console.log('--- 4. multiply three numbers & return the result --- ');
-console.log('Test; 1 * 3 * 3 = 9 and the return result is:', multiplyThree(1, 3, 3));
-console.log('Test; 2 * 5 * 7 = 70 and the return result is:', multiplyThree(2, 5, 7));
-console.log('Test; 3 * 4 * 2 = 24 and the return result is:', multiplyThree(3, 4, 2));
+console.log('Test; 1 * 3 * 3 = 9 and the return result:', multiplyThree(1, 3, 3));
+console.log('Test; 2 * 5 * 7 = 70 and the return result:', multiplyThree(2, 5, 7));
+console.log('Test; 3 * 4 * 2 = 24 and the return result:', multiplyThree(3, 4, 2));
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
@@ -157,12 +157,28 @@ console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
 // 9. Function to return the sum of all numbers in an array
+//comments:
+//  declared variable 'sumArray' and assigned [11,22,33,44] number in array 
+//  created function name sumAll() 
+//  define a variable that only work in block code called 'sum', assigned it to 0 as the initializer/starter
+//  added a for in loop; loops through element/value in 'sumArray' to calculate sum of elements
+//  then return the 'sum' (sum of all the elements of the array).
+// NOTE: the numbers in 'sumArray' are just samples; any number can be use and go through this function
+//        the end result will be the same.
+
 console.log('--- 9. function to return the sum of array ---');
+
+const sumArray = [11,22,33,44]; //sample numbers
 function sumAll() {
   let sum = 0;
   // TODO: loop to add items
+  for (let i in sumArray) {
+    sum += sumArray[i];
+  }
   return sum;
 }
+sumAll();
+console.log('The sum of all numbers in array:', sumAll());
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
