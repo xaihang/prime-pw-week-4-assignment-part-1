@@ -105,35 +105,30 @@ console.log('Last item in the array is:', getLast());
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 //**** comments:
-//
-//
-//
-//
+//  created arrays (1 and 2) to test function named 'find'
+//  inside the function we have two parameters we are passing in (value and the array)
+//  when invoking the function we are looping through the array list that was passed in
+//  then we're checking if the value we passed in is equal in value/type as in each item of the list
+//  if it does exist/found it will return true (boolean); otherwise false (boolean)
+
 console.log(
   '--- 7. function to return a boolean, if value is present in array ---');
 
-let array1 = ['bird', 'bat', 'beetles'];
-// // let array1 = [];
-// function find(value, array1) {
-//   let i = 0;
-//  for (let i in array1) {
-//   find = array1 + i;
-//   if (find() === array1[i]){
-//     return 'TRUE';
-//   } else {
-//     return 'FALSE'
-//   }
-
-//  } 
- 
-// }
-
-function find(value, array1) {
-  return 'TRUE' 
+let array1 = ['bird', 'bat', 'beetles']; //sample array 
+let array2 = ['apple', 'berry', 'cherry']; // sample array
+function find(value, list) {
+   for (i = 0; i < list.length; i++){
+    if (value === list[i]) {
+      return true; 
+    } else {
+      return false;
+    }
+   }
 }
-
-find();
-console.log('Value is found? - should say false:', find());
+console.log('Is this value (Xai) in array1? - it should say false:', find('Xai', array1));
+console.log('Is this value (bird) in array1? - it should say True:', find('bird', array1));
+console.log('Is this value (bird) in array1? - it should say True:', find('bird', array2));
+console.log('Is this value (bird) in array1? - it should say True:', find('apple', array2));
 
 // console.log('Value is found, true -', find());
 // console.log('Value is not found, false -', find());
@@ -159,9 +154,9 @@ const string = '';
 const letter = string[0];
 function isFirstLetter(letter, string) {
   if (string >= letter) {
-    return 'TRUE';
+    return true;
   } else {
-    return 'FALSE';
+    return false;
   }
 }
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
@@ -214,7 +209,6 @@ const positiveArray = numArray.filter(positiveNumber);
 function positiveNumber(numArray) {
   return numArray >= 0;
 }
-
 console.log('New array with only positive numbers:', positiveArray);
 
 
@@ -222,8 +216,17 @@ console.log('New array with only positive numbers:', positiveArray);
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
 //**** comments:
-//
-//
-//
-//
+//  from: Edabit url: https://edabit.com/challenge/nBW6ubsQCurPvhpWc
+//  create  function that takes a string of lowercase characters
+//  and returns that string reversed && in upper case 
+//  
+//  
 console.log('--- 11. pick a challenge and solve it! ---');
+
+const string1 = ['prime academy'];
+const reverseString1 = string1.reverse();
+console.log(reverseString1);
+// function reverseCapitalize(string1) {
+//  return string1.toUpperCase();
+// }
+// console.log('string in reverse:', reverseCapitalize('prime academy'));
