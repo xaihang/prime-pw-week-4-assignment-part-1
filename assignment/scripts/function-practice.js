@@ -9,6 +9,7 @@ function hello() {
   return 'Hello World!';
 }
 
+//**** comment:
 //re-write function above in arrow function style
 //  *this style of arrow function only works if the function has only one statement
 // hello = () => 'Hello World!';
@@ -111,8 +112,7 @@ console.log('Last item in the array is:', getLast());
 //  then we're checking if the value we passed in is equal in value/type as in each item of the list
 //  if it does exist/found it will return true (boolean); otherwise false (boolean)
 
-console.log(
-  '--- 7. function to return a boolean, if value is present in array ---');
+console.log('--- 7. function to return a boolean, if value is present in array ---');
 
 let array1 = ['bird', 'bat', 'beetles']; //sample array 
 let array2 = ['apple', 'berry', 'cherry']; // sample array
@@ -126,12 +126,9 @@ function find(value, list) {
    }
 }
 console.log('Is this value (Xai) in array1? - it should say false:', find('Xai', array1));
-console.log('Is this value (bird) in array1? - it should say True:', find('bird', array1));
-console.log('Is this value (bird) in array1? - it should say True:', find('bird', array2));
-console.log('Is this value (bird) in array1? - it should say True:', find('apple', array2));
-
-// console.log('Value is found, true -', find());
-// console.log('Value is not found, false -', find());
+console.log('Is this value (bird) in array1? - it should say true:', find('bird', array1));
+console.log('Is this value (bird) in array2? - it should say false:', find('bird', array2));
+console.log('Is this value (apple) in array2? - it should say true:', find('apple', array2));
 
 // ----------------------
 // Stretch Goals
@@ -142,10 +139,10 @@ console.log('Is this value (bird) in array1? - it should say True:', find('apple
 //    declared variables for 'string' and a new variable 'letter' 
 //    to access the 'string' variable i picked the bracket notation [] with index reference of '0'
 //    [0] can access the first letter of my 'string' value. 
-//    created a function 'isFirstLetter' and passed through it with paramenter letter and string
+//    created a function 'isFirstLetter' and passed through it with parameter (letter and string)
 //    it will check to see if the string's (element/value) is greater than or equal to the letter (the 0 index of the string)
-//    if the first letter is valid that of letter than return 'TRUE'
-//    otherwise, return "FALSE"
+//    if the first letter is valid that of letter than return true (boolean)
+//    otherwise, return false (boolean)
 
 console.log(
   '--- 8. STRETCH GOAL: a function with boolean to check first letter ---');
@@ -209,7 +206,7 @@ const positiveArray = numArray.filter(positiveNumber);
 function positiveNumber(numArray) {
   return numArray >= 0;
 }
-console.log('New array with only positive numbers:', positiveArray);
+console.log('New array with positive numbers:', positiveArray);
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
@@ -219,14 +216,29 @@ console.log('New array with only positive numbers:', positiveArray);
 //  from: Edabit url: https://edabit.com/challenge/nBW6ubsQCurPvhpWc
 //  create  function that takes a string of lowercase characters
 //  and returns that string reversed && in upper case 
-//  
-//  
+// code explanation:
+//    1) created a function name reverseCapitalize and when invoked we are passing through a string (parameter)
+//    2) then we use the split() method to separate each of the string (character, letters etc), this return a new array we will name splitString 
+//    3) then we take splitString variable and apply reverse() method by returning a new variable named reversed;
+//       this method reverses the order of the array's elements 
+//    4) then we use the join() method to turn the array to string - again we will create a new variable call joinArray
+//    5)  now we should have split, reverse, and joined our string; we need to apply toUpperCase() method 
+//        and created another variable upperCaseString -  *toUpperCase method will return the letters into caps. 
+//    6) lastly on our code block we want to return upperCaseString 
 console.log('--- 11. pick a challenge and solve it! ---');
 
-const string1 = ['prime academy'];
-const reverseString1 = string1.reverse();
-console.log(reverseString1);
-// function reverseCapitalize(string1) {
-//  return string1.toUpperCase();
+//initial function 
+// function reverseCapitalize(string) {
+//  const splitString = string.split(); 
+//  const reversed = splitString.reverse();
+//  const combined = reversed.join(); 
+//  const capLetters = combined.toUpperCase();
+//  return capLetters;
 // }
-// console.log('string in reverse:', reverseCapitalize('prime academy'));
+
+//short hand version:
+function reverseCapitalize(string) {
+  return string.split().reverse().join().toUpperCase();
+}
+
+console.log('String in reverse and capitalize:', reverseCapitalize('prime academy'));
