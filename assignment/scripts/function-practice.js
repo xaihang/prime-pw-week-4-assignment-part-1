@@ -223,20 +223,32 @@ console.log('New array with positive numbers:', positiveArray);
 // code explanation: 
 //    1) created a test variable name school assigned to prime (string)
 //    2) created a function named reverseCapitalize(string) when invoked it will pass string to pass it through the test of:
-//    3) split(); this method takes the string and separate the value into an array, a new variable called splitSch
-//    4) reverse(); this method will take the current array order and reverse it, created a new variable backwardSch
-//    5) join(); this method will take the array and turn it into a string by joining together all the array elements, which created new variable joinSch
-//    6) toUpperCase(): this method will capitalize a string, which created a new variable name capSch
+//    3) split(); this method takes the string and separate the value into an array
+//    4) reverse(); this method will take the current array order and reverse it
+//    5) join(); this method will take the array and turn it into a string by joining together all the array elements
+//    6) toUpperCase(): this method will capitalize a string
 //    7) after the string goes through each of the methods above we want it to return reverse and capitalized
 console.log('--- 11. pick a challenge and solve it! ---');
 
-const school = 'prime'; // string
-function reverseCapitalize(string) {
-  const splitSch = school.split(""); console.log(splitSch); // ['p', 'r', 'i', 'm', 'e]
-  const backwardSch =  splitSch.reverse(); console.log(backwardSch); //['e', 'm', 'i', 'r', 'p']
-  const joinSch = backwardSch.join(""); console.log(joinSch); // emirp
-  const capSch = joinSch.toUpperCase(); console.log(capSch); //EMIRP
-  return capSch;
-}
-console.log('Prime in reversed and capitalized:', reverseCapitalize()); 
+// const school = 'prime'; // string
+// function reverseCapitalize(string) {
+//   const splitSch = school.split(""); console.log(splitSch); // ['p', 'r', 'i', 'm', 'e]
+//   const backwardSch =  splitSch.reverse(); console.log(backwardSch); //['e', 'm', 'i', 'r', 'p']
+//   const joinSch = backwardSch.join(""); console.log(joinSch); // emirp
+//   const capSch = joinSch.toUpperCase(); console.log(capSch); //EMIRP
+//   return capSch;
+// }
+// console.log('Prime in reversed and capitalized:', reverseCapitalize()); 
 
+function reverseCapitalize(string) {
+  const splitMethod = string.split(""); 
+  const revsMethod =  splitMethod.reverse(); 
+  const joinMethod = revsMethod.join(""); 
+  const capMethod = joinMethod.toUpperCase(); 
+  return capMethod;
+}
+console.log('Testing:', (reverseCapitalize("edabit")));
+console.log('Testing:', (reverseCapitalize("abc")));
+console.log('Testing:', (reverseCapitalize("hellothere")));
+console.log('Testing:', (reverseCapitalize("input")));
+console.log('Testing:', (reverseCapitalize("indubitably")));
