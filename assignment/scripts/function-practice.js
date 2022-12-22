@@ -220,29 +220,23 @@ console.log('New array with positive numbers:', positiveArray);
 //  from: Edabit url: https://edabit.com/challenge/nBW6ubsQCurPvhpWc
 //  create  function that takes a string of lowercase characters
 //  and returns that string reversed && in upper case 
-// code explanation:
-//    1) created a function name reverseCapitalize and when invoked we are passing through a string (parameter)
-//    2) then we use the split() method to separate each of the string (character, letters etc), this return a new array we will name splitString 
-//    3) then we take splitString variable and apply reverse() method by returning a new variable named reversed;
-//       this method reverses the order of the array's elements 
-//    4) then we use the join() method to turn the array to string - again we will create a new variable call joinArray
-//    5)  now we should have split, reverse, and joined our string; we need to apply toUpperCase() method 
-//        and created another variable upperCaseString -  *toUpperCase method will return the letters into caps. 
-//    6) lastly on our code block we want to return upperCaseString 
+// code explanation: 
+//    1) created a test variable name school assigned to prime (string)
+//    2) created a function named reverseCapitalize(string) when invoked it will pass string to pass it through the test of:
+//    3) split(); this method takes the string and separate the value into an array, a new variable called splitSch
+//    4) reverse(); this method will take the current array order and reverse it, created a new variable backwardSch
+//    5) join(); this method will take the array and turn it into a string by joining together all the array elements, which created new variable joinSch
+//    6) toUpperCase(): this method will capitalize a string, which created a new variable name capSch
+//    7) after the string goes through each of the methods above we want it to return reverse and capitalized
 console.log('--- 11. pick a challenge and solve it! ---');
 
-//initial function 
-// function reverseCapitalize(string) {
-//  const splitString = string.split(); 
-//  const reversed = splitString.reverse();
-//  const combined = reversed.join(); 
-//  const capLetters = combined.toUpperCase();
-//  return capLetters;
-// }
-
-//short hand version:
+const school = 'prime'; // string
 function reverseCapitalize(string) {
-  return string.split().reverse().join().toUpperCase();
+  const splitSch = school.split(""); console.log(splitSch); // ['p', 'r', 'i', 'm', 'e]
+  const backwardSch =  splitSch.reverse(); console.log(backwardSch); //['e', 'm', 'i', 'r', 'p']
+  const joinSch = backwardSch.join(""); console.log(joinSch); // emirp
+  const capSch = joinSch.toUpperCase(); console.log(capSch); //EMIRP
+  return capSch;
 }
+console.log('Prime in reversed and capitalized:', reverseCapitalize()); 
 
-console.log('String in reverse and capitalize:', reverseCapitalize('prime academy'));
