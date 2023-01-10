@@ -90,8 +90,7 @@ console.log('--- 6. function to return last item in an array ---');
 //  declared a new variable name lastItem assigned it to the passing array and use pop() method
 //  it will returned the last item of the array
 function getLast(array) {
-  let lastItem = array.pop();
-  return lastItem;
+  return array[array.length - 1]
 }
 console.log('Last item in the array is:', getLast([])); //undefined - because array is empty
 console.log('Last item in the array is:', getLast([1, 2, 3])); // 3
